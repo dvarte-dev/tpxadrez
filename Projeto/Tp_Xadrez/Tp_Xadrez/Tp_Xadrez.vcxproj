@@ -153,6 +153,7 @@
   <ItemGroup>
     <ClInclude Include="Jogador.h" />
     <ClInclude Include="pch.h" />
+    <ClInclude Include="Peao.h" />
     <ClInclude Include="Pecas.h" />
     <ClInclude Include="Tabuleiro.h" />
   </ItemGroup>
@@ -164,6 +165,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="Peao.cpp" />
     <ClCompile Include="Pecas.cpp" />
     <ClCompile Include="Tabuleiro.cpp" />
     <ClCompile Include="Tp_Xadrez.cpp" />

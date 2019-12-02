@@ -17,6 +17,7 @@ public:
 	void Jogada();
 	void SetNome(std::string nome);
 	void InicializaPecas();
-	Pecas* MinhasPecas;
+	void DestroiPecas();
+	Pecas** MinhasPecas;
 };
 

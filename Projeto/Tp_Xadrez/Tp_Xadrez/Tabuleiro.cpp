@@ -11,7 +11,7 @@ Tabuleiro::Tabuleiro()
 
 Tabuleiro::~Tabuleiro()
 {
-
+	Resetar();
 }
 
 void Tabuleiro::Vencedor(Jogador qual)
@@ -31,6 +31,16 @@ bool Tabuleiro::ConferirJogada(Pecas Qual)
 	return false;
 }
 
+void Tabuleiro::Resetar()
+{
+	for (int i = 0; i < TamanhoLinhas; i++)
+	{
+		if(Casas[i] != nullptr)
+		delete [] Casas[i];
+	}
+	delete[] Casas;
+}
+
 void Tabuleiro::InicializarJogo()
 {
 	delete Jogador1;
@@ -41,18 +51,18 @@ void Tabuleiro::InicializarJogo()
 	cout << "Jogador2 ";
 	Jogador2 = new Jogador();
 
-	for (int i = 0; i < TamanhoLinhas; i++)
-	{
-		delete [] Casas[i];
-	}
-	delete[] Casas;
-
 	Casas = new char*[TamanhoLinhas];
 	for (int i = 0; i < TamanhoLinhas; i++)
 	{
 		Casas[i] = new char[TamanhoColunas];
 	}
 
-
-
+	for (int i = 0; i < TamanhoLinhas; i++)
+	{
+		for (int j = 0; j < TamanhoColunas; j++)
+		{
+			cout << Casas[i][j] << " ";
+		}
+		cout << endl;
+	}
 }

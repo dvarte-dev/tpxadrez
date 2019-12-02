@@ -11,8 +11,8 @@ private:
 
 	char** Casas;
 
-	int TamanhoLinhas;
-	int TamanhoColunas;
+	int TamanhoLinhas = 8;
+	int TamanhoColunas = 8;
 
 public:
 	Tabuleiro();
@@ -26,5 +26,7 @@ public:
 	bool ConferirJogada(Pecas qual);
 	void Vencedor(Jogador quem);
 	void InicializarJogo();
+	void Resetar();
+
 };
 
