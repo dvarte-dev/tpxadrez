@@ -1,10 +1,6 @@
-#include <string>
-#include <vector>
-#include <list>
-#include <iostream>
-#include <assert.h>
-
 #include "Tabuleiro.h"
+#include "Jogador.h"
+#include "Peca.h"
 
 
 void Tabuleiro::HabilitarTurno()
@@ -12,7 +8,7 @@ void Tabuleiro::HabilitarTurno()
 
 }
 
-boolean Tabuleiro::ConferirJogada(Peca Qual)
+bool Tabuleiro::ConferirJogada(Peca Qual)
 {
 	return 0;
 }

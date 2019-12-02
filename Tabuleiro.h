@@ -1,12 +1,3 @@
-#ifndef TABULEIRO_H
-#define TABULEIRO_H
-
-#include <string>
-#include <vector>
-#include <list>
-#include <iostream>
-#include <assert.h>
-
 #include "Jogador.h"
 #include "Interface.h"
 #include "Peca.h"
@@ -28,7 +19,7 @@ public:
 public:
 	void HabilitarTurno();
 
-	boolean ConferirJogada(Peca Qual);
+	bool ConferirJogada(Peca Qual);
 
 	void Vencedor();
 

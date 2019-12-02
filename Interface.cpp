@@ -6,6 +6,13 @@
 
 #include "Interface.h"
 
+using namespa std;
+
+void main()
+{
+	Peca Testando = new Peca();
+}
+
 //Input dos nomes dos jogadores e com as cores escolhidas
 void Interface::InicializarVariaveis()
 {
