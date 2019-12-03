@@ -151,13 +151,20 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Bispo.h" />
+    <ClInclude Include="Cavalo.h" />
     <ClInclude Include="Jogador.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Peao.h" />
     <ClInclude Include="Pecas.h" />
+    <ClInclude Include="Rainha.h" />
+    <ClInclude Include="Rei.h" />
     <ClInclude Include="Tabuleiro.h" />
+    <ClInclude Include="Torre.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Bispo.cpp" />
+    <ClCompile Include="Cavalo.cpp" />
     <ClCompile Include="Jogador.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
@@ -167,7 +174,10 @@
     </ClCompile>
     <ClCompile Include="Peao.cpp" />
     <ClCompile Include="Pecas.cpp" />
+    <ClCompile Include="Rainha.cpp" />
+    <ClCompile Include="Rei.cpp" />
     <ClCompile Include="Tabuleiro.cpp" />
+    <ClCompile Include="Torre.cpp" />
     <ClCompile Include="Tp_Xadrez.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

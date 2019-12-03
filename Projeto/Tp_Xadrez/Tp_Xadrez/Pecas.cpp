@@ -14,7 +14,7 @@ Pecas::Pecas(char Id, int* Pos)
 
 Pecas::~Pecas()
 {
-	delete [] Posicao;
+	delete [] this->Posicao;
 }
 
 void Pecas::Movimento()
@@ -24,10 +24,24 @@ void Pecas::Movimento()
 
 int* Pecas::GetPos()
 {
-	return this->Posicao;
+	return Posicao;
 }
 
 char Pecas::GetId()
 {
 	return Identificador;
+}
+void Pecas::SetPos(int* Pos)
+{
+	this->Posicao = Pos;
+}
+
+bool Pecas::GetMorto()
+{
+	return Morto;
+}
+
+void Pecas::SetID(char ID)
+{
+	Identificador = ID;
 }

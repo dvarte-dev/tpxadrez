@@ -1,6 +1,15 @@
 #include "pch.h"
 #include "Tabuleiro.h"
 #include <iostream>
+#include "Pecas.h"
+#include "Peao.h"
+#define NUMTIPOS 6
+#define PEOES 0
+#define CAVALOS 1
+#define BISPOS 2
+#define TORRES 3
+#define RAINHA 4
+#define REI 5
 using namespace std;
 
 Tabuleiro::Tabuleiro()
@@ -61,8 +70,48 @@ void Tabuleiro::InicializarJogo()
 	{
 		for (int j = 0; j < TamanhoColunas; j++)
 		{
+			Casas[i][j] = '0';
 			cout << Casas[i][j] << " ";
 		}
 		cout << endl;
+	}
+	cout << endl;
+	cout << endl;
+}
+
+void Tabuleiro::AtualizarTela()
+{
+	AtualizaPeca(PEOES, 8);
+	AtualizaPeca(CAVALOS, 2);
+	AtualizaPeca(BISPOS, 2);
+	AtualizaPeca(TORRES, 2);
+	AtualizaPeca(RAINHA, 1);
+	AtualizaPeca(REI, 1);
+
+	for (int i = 0; i < TamanhoLinhas; i++)
+	{
+		for (int j = 0; j < TamanhoColunas; j++)
+		{
+			cout << Casas[i][j] << " ";
+		}
+		cout << endl;
+	}
+}
+
+void Tabuleiro::AtualizaPeca(int Qual, int Quantos)
+{
+	for (int j = 0; j < Quantos; j++)
+	{
+		int* CurrentPos = Jogador1->MinhasPecas[Qual][j].GetPos();
+		if (Jogador1->MinhasPecas[Qual][j].GetMorto())
+		{
+			Casas[CurrentPos[0]][CurrentPos[1]] = Jogador1->MinhasPecas[Qual][j].GetId();
+		}
+
+		if (Jogador2->MinhasPecas[Qual][j].GetMorto())
+		{
+			CurrentPos = Jogador2->MinhasPecas[Qual][j].GetPos();
+			Casas[CurrentPos[0]][CurrentPos[1]] = Jogador2->MinhasPecas[Qual][j].GetId();
+		}
 	}
 }

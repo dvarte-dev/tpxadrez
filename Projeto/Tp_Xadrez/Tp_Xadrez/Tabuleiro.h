@@ -13,20 +13,20 @@ private:
 
 	int TamanhoLinhas = 8;
 	int TamanhoColunas = 8;
+	void AtualizaPeca(int Qual, int Quantas);
 
 public:
 	Tabuleiro();
 	~Tabuleiro();
 
-	
-
+	void AtualizarTela();
 	bool Turno;
-
 	void HabilitarTurno();
 	bool ConferirJogada(Pecas qual);
 	void Vencedor(Jogador quem);
 	void InicializarJogo();
 	void Resetar();
+
 
 };
 

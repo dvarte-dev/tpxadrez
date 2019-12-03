@@ -12,6 +12,7 @@ int main()
 	std::cout << "Hello World!\n";
 	Tabuleiro *EsteTabuleiro = new Tabuleiro();
 	EsteTabuleiro->InicializarJogo();
+	EsteTabuleiro->AtualizarTela();
 
 
 }

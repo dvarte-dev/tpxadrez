@@ -7,6 +7,7 @@ protected:
 
 	int *Posicao;
 	char Identificador;
+	bool Morto;
 
 public:
 	Pecas();
@@ -14,6 +15,9 @@ public:
 	~Pecas();	
 	int* GetPos();
 	char GetId();
+	void SetPos(int* Pos);
+	bool GetMorto();
+	void SetID(char id);
 
 	virtual void Movimento();
 

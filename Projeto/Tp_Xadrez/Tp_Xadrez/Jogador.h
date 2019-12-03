@@ -3,6 +3,8 @@
 #include <iostream>
 #include "pch.h"
 #include "Pecas.h"
+#define NUMTIPOS 6
+
 class Jogador
 {
 public:
@@ -11,13 +13,16 @@ public:
 
 	std::string Nome;
 	bool Cor;
-	int NumPecas;
 	std::string Input;
 
 	void Jogada();
 	void SetNome(std::string nome);
 	void InicializaPecas();
 	void DestroiPecas();
+
 	Pecas** MinhasPecas;
+
+private: 
+	bool TestarCor();
 };
 
